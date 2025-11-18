@@ -8,21 +8,21 @@
 .title{
     font-family: Arial;
 }
-#painel-inclusão li{
+.painel-inclusão li{
     display: inline;
 }
-#painel-inclusão button{
+.painel-inclusão button{
     color: #fff;
     background: #00a0ff;
     border-color: #00a0ff;
     border-radius: 10px;
     padding: 5px; 
 }
-#painel-inclusão button:hover{
+.painel-inclusão button:hover{
     background: #00a0a0;
     border-color: #00a0a0;
 }
-#painel-inclusão button:active{
+.painel-inclusão button:active{
     background: #ffc0cb;
     border-color: #ffc0cb;
 }

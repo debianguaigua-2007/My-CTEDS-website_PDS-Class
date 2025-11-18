@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <title>Tutorial de HTML</title>
+    </head>
+    <body>
+        <header style="background: #d0d0d0">
+            <h1 class="title">Tutorial de HTML</h1>
+            <h5>Aprenda a criar suas próprias páginas web!</h5>
+            <a href="index.html">Voltar à página Principal</a>
+            <p>Tem alguma deficiencia? Talvez isto possa ajudar:</p>
+            <ul class="painel-inclusão">
+                <li><button id="aumentar-fonte">Aumentar fonte</button></li>
+                <li><button id="diminuir-fonte">Diminuir fonte</button></li>
+                <li><button id="reinicia-fonte">Reiniciar fonte</button></li>
+                <li><button id="alterna-contraste">Alto contraste</button></li>
+                <p id="aviso-fonte"></p>
+            </ul>
+            <p>Precisa de algo específico? Talvez isto possa ajudar:</p>
+            <ul class="painel-inclusão">
+                <li><a href="#Textag">Tags de texto</a></li>
+                <li><a href="#Midiatag">Tags de mídia</a></li>
+                <li><a href="#Linktag">Tags de links</a></li>
+                <li><a href="#Backtag">Tags de Back-End</a></li>
+                <li><a href="#Listtag">Tags de Listas</a></li>
+                <li><a href="#Tabletag">Tags de Tabelas</a></li>
+                <li><a href="#Formtag">Tags de formulários</a></li>
+                <li><a href="#atribute">Atributos de elementos</a></li>
+            </ul>
+        </header>
+        <main>
+            <div>
+                <article>
+                    <h2 class="title">O que é HTML?</h2>
+                    <p class="text">HTML (HyperText Markup Language) é a linguagem de marcação padrão para criar páginas web. 
+                        Ele é usado para estruturar o conteúdo na web, como textos, imagens, links e outros elementos,
+                        também é integravél com outras linguagens de programação, como CSS e JavaScript,
+                        e serve para manter uma estrutura para a sua página web.</p>
+                </article>
+                <article>
+                    <h2 class="title">Estrutura básica de um documento HTML</h2>
+                    <p class="text">Um documento HTML é composto por várias tags que definem a estrutura e o conteúdo da página. 
+                        As tags são formas de como definir os comandos que irão definir os elementos da página.
+                        Para criar uma página, primeiro é necessário um padrão de comandos, que é comum para cada site:</p>
+                    <pre>
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="pt-br"&gt;
+                            &lt;head&gt;
+                                &lt;meta charset="UTF-8"/&gt;
+                                &lt;meta name="viewport" content="width=device-width, initial-scale=1"/&gt;
+                                &lt;title&gt;Título da Página&lt;/title&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                                &lt;header&gt;
+                                    &lt;h1&gt;Cabeçalho Principal&lt;/h1&gt;
+                                &lt;/header&gt;
+                                &lt;main&gt;
+                                    &lt;article&gt;
+                                        &lt;h2&gt;Título do Artigo&lt;/h2&gt;
+                                        &lt;p&gt;Conteúdo do artigo...&lt;/p&gt;
+                                    &lt;/article&gt;
+                                &lt;/main&gt;
+                                &lt;footer&gt;
+                                    &lt;p&gt;Rodapé da Página&lt;/p&gt;
+                                &lt;/footer&gt;
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+                    </pre>
+                    <p class="text">Esta é uma representação da parte mais crítica de uma página feita em HTML, sem estes componentes principais,
+                        a página não funcionaria corretamente. Cada tag tem uma função específica, como definir o cabeçalho, o corpo, os artigos, entre outros.
+                    </p>
+                    <p class="text">As tags são geralmente compostas por uma abertura e um fechamento, como &lt;tag&gt; e &lt;/tag&gt;. 
+                        Algumas tags podem ser auto-fechadas, como &lt;img /&gt; para imagens. 
+                        É importante lembrar que as tags devem ser aninhadas corretamente para que o HTML seja válido.</p>
+                    <p class="text">Diferentes tags podem ter diferentes funções e portanto podem não caber em diferentes lugares,
+                        mas estão agrupados em categorias diferentes:
+                    </p>
+                    <h3 id="Textag">Tags de texto</h3>
+                    <p class="text">São colocados dentro da tag &lt;body&gt;,são característicos para definir a estrutura de um texto:</p>
+                    <ul>
+                        <li>&lt;h1&gt;&lt;/h1&gt; a &lt;h6&gt;&lt;/h6&gt; Indicam um titulo ou subtitulo para o texto, dependendo do numero colocado, o tamanho irá mudando</li>
+                        <li>&lt;p&gt;&lt;/p&gt; (P de parágrafo) Define um parágrafo de texto</li>
+                        <li>&lt;strong&gt;&lt;/strong&gt; Deixa o texto em negrito</li>
+                        <li>&lt;em&gt;&lt;/em&gt; Deixa o texto em itálico</li>
+                        <li>&lt;article&gt;&lt;/article&gt; Cria uma area de texto de tipo artigo</li>
+                    </ul>
+                    <h3 id="Midiatag">Tags de mídia</h3>
+                    <p class="text">São colocados dentro da tag &lt;body&gt; Usadas para inserir mídia na página, como imagens e vídeos:</p>
+                    <ul>
+                        <li>&lt;img /&gt; Insere uma imagem na página (É possível inserir fotos de arquivos .jpg ou .png). Ex: &lt;img src="caminho/para/imagem.jpg" alt="Descrição da imagem" /&gt;</li>
+                        <li>&lt;video&gt;&lt;/video&gt; Insere um vídeo na página. Ex: &lt;video src="caminho/para/video.mp4" controls&gt;&lt;/video&gt;</li>
+                        <li>&lt;audio&gt;&lt;/audio&gt; Insere um áudio na página. Ex: &lt;audio src="caminho/para/audio.mp3" controls&gt;&lt;/audio&gt;</li>
+                        <li>&lt;iframe&gt;&lt;/iframe&gt; Insere um mapa ou uma interface de outro site</li>
+                        <li>&lt;picture&gt;&lt;/picture&gt; Usada para inserir imagens responsivas na página</li>
+                        <li>&lt;source /&gt; Usada dentro da tag &lt;picture&gt; ou &lt;video&gt; para definir diferentes fontes de mídia</li>
+                        <li>&lt;figcaption&gt;&lt;/figcaption&gt; Usada para adicionar uma legenda a uma imagem ou figura</li>
+                        <li>&lt;figure&gt;&lt;/figure&gt; Usada para agrupar uma imagem e sua legenda</li>
+                        <li>&lt;embed /&gt; Usada para incorporar conteúdo multimídia, como vídeos ou áudios, na página</li>
+                        <li>&lt;object&gt;&lt;/object&gt; Usada para incorporar conteúdo externo, como arquivos PDF ou Flash, na página</li>
+                        <li>&lt;param /&gt; Usada dentro da tag &lt;object&gt; para definir parâmetros para o conteúdo incorporado</li>
+                        <li>&lt;map&gt;&lt;/map&gt; Usada para definir áreas clicáveis em uma imagem</li>
+                        <li>&lt;area /&gt; Usada dentro da tag &lt;map&gt; para definir uma área clicável específica</li>
+                        <li>&lt;canvas&gt;&lt;/canvas&gt; Usada para desenhar gráficos e animações na página usando JavaScript</li>
+                    </ul>
+                    <h3 id="Linktag">Tags de links</h3>
+                    <p class="text">São colocados dentro da tag &lt;body&gt; Usadas para criar links para outras páginas ou recursos:</p>
+                    <ul>
+                        <li>&lt;a&gt;&lt;/a&gt; Cria um link. Ex: &lt;a href="https://www.exemplo.com"&gt;Clique aqui&lt;/a&gt;</li>
+                    </ul>
+                    <h3>Tags de estrutura</h3>
+                    <p class="text">São colocados dentro da tag &lt;body&gt; Usadas para estruturar a página:</p>
+                    <ul>
+                        <li>&lt;header&gt;&lt;/header&gt; Define o cabeçalho da página ou de uma seção</li>
+                        <li>&lt;main&gt;&lt;/main&gt; Define o conteúdo principal da página</li>
+                        <li>&lt;footer&gt;&lt;/footer&gt; Define o rodapé da página ou de uma seção</li>
+                        <li>&lt;div&gt;&lt;/div&gt; Define uma seção genérica na página</li>
+                        <li>&lt;span&gt;&lt;/span&gt; Define uma seção inline genérica na página</li>
+                        <li>&lt;section&gt;&lt;/section&gt; Define uma seção temática na página</li>
+                        <li>&lt;nav&gt;&lt;/nav&gt; Define uma seção de navegação na página</li>
+                        <li>&lt;aside&gt;&lt;/aside&gt; Define um conteúdo lateral na página</li>
+                        <li>&lt;blockquote&gt;&lt;/blockquote&gt; Define uma citação em bloco</li>
+                        <li>&lt;hr /&gt; Insere uma linha horizontal para separar conteúdos</li>
+                    </ul>
+                    <h3 id="Backtag">Tags de Back-End</h3>
+                    <p class="text">São colocados dentro da tag &lt;head&gt; Usadas para integrar com linguagens de programação do lado do servidor ou do cliente:</p>
+                    <ul>
+                        <li>&lt;script&gt;&lt;/script&gt; Usada para inserir código JavaScript na página ou para vincular arquivos JavaScript na página</li>
+                        <li>&lt;link /&gt; Usada para vincular arquivos externos à página</li>
+                        <li>&lt;style&gt;&lt;/style&gt; Usada para inserir estilos CSS diretamente na página</li>
+                        <li>&lt;meta /&gt; Usada para definir metadados sobre o documento HTML</li>
+                    </ul>
+                    <h3 id="Listtag">Tags de Listas</h3>
+                    <p class="text">São colocados dentro da tag &lt;body&gt; Usadas para criar listas ordenadas e não ordenadas:</p>
+                    <ul>
+                        <li>&lt;ul&gt;&lt;/ul&gt; Cria uma lista não ordenada (com marcadores)</li>
+                        <li>&lt;ol&gt;&lt;/ol&gt; Cria uma lista ordenada (numerada)</li>
+                        <li>&lt;li&gt;&lt;/li&gt; Define um item de lista</li>
+                    </ul>
+                    <h3 id="Tabletag">Tags de Tabelas</h3>
+                    <p class="text">São colocados dentro da tag &lt;body&gt; Usadas para criar tabelas de dados:</p>
+                    <ul>
+                        <li>&lt;table&gt;&lt;/table&gt; Cria uma tabela</li>
+                        <li>&lt;tr&gt;&lt;/tr&gt; Define uma linha na tabela</li>
+                        <li>&lt;td&gt;&lt;/td&gt; Define uma célula de dados na tabela</li>
+                        <li>&lt;th&gt;&lt;/th&gt; Define uma célula de cabeçalho na tabela</li>
+                        <li>&lt;thead&gt;&lt;/thead&gt; Define o cabeçalho da tabela</li>
+                        <li>&lt;tbody&gt;&lt;/tbody&gt; Define o corpo da tabela</li>
+                        <li>&lt;tfoot&gt;&lt;/tfoot&gt; Define o rodapé da tabela</li>
+                    </ul>
+                    <h3 id="Formtag">Tags de formulários</h3>
+                    <p class="text">São colocados dentro da tag &lt;body&gt; Usadas para criar formulários para entrada de dados:</p>
+                    <ul>
+                        <li>&lt;form&gt;&lt;/form&gt; Cria um formulário</li>
+                        <li>&lt;input /&gt; Cria um campo de entrada de dados</li>
+                        <li>&lt;textarea&gt;&lt;/textarea&gt; Cria uma área de texto para entrada de dados</li>
+                        <li>&lt;button&gt;&lt;/button&gt; Cria um botão</li>
+                        <li>&lt;select&gt;&lt;/select&gt; Cria uma lista suspensa</li>
+                        <li>&lt;option&gt;&lt;/option&gt; Define uma opção em uma lista suspensa</li>
+                        <li>&lt;label&gt;&lt;/label&gt; Define um rótulo para um elemento de formulário</li>
+                    </ul>
+                </article>
+                <article>
+                    <h2 id="atribute">Atributos de elementos</h2>
+                    <p class="text">Os atributos são usados para fornecer informações adicionais sobre um elemento HTML. 
+                        Eles são colocados dentro da tag de abertura do elemento e geralmente vêm em pares nome-valor. 
+                        Por exemplo, o atributo "href" é usado na tag &lt;a&gt; para especificar o URL do link:</p>
+                    <pre>
+                        &lt;a href="https://www.exemplo.com"&gt;Clique aqui&lt;/a&gt;
+                    </pre>
+                    <p class="text">Alguns atributos comuns incluem:</p>
+                    <ul>
+                        <li>id: Define um identificador único para um elemento</li>
+                        <li>class: Define uma classe para um elemento, que pode ser usada para aplicar estilos CSS</li>
+                        <li>src: Especifica o caminho para um recurso externo, como uma imagem ou um vídeo</li>
+                        <li>alt: Fornece uma descrição alternativa para uma imagem, usada para acessibilidade</li>
+                        <li>title: Fornece informações adicionais sobre um elemento, geralmente exibidas como uma dica de ferramenta</li>
+                        <li>style: Permite aplicar estilos CSS diretamente a um elemento</li>
+                        <li>width e height: Especificam a largura e a altura de um elemento, como uma imagem ou um vídeo</li>
+                        <li>target: Especifica onde abrir o link (por exemplo, em uma nova aba)</li>
+                        <li>name: Define o nome de um elemento, usado em formulários</li>
+                        <li>value: Define o valor de um elemento, usado em formulários</li>
+                        <li>placeholder: Fornece um texto de espaço reservado em campos de entrada</li>
+                        <li>disabled: Desabilita um elemento, tornando-o não interativo</li>
+                        <li>checked: Marca um elemento de entrada do tipo checkbox ou radio como selecionado</li>
+                        <li>href: Especifica o URL de destino de um link</li>
+                        <li>rel: Define a relação entre o documento atual e o recurso vinculado</li>
+                        <li>type: Especifica o tipo de um elemento, como o tipo de entrada em um formulário</li>
+                        <li>action: Define a URL para onde os dados do formulário serão enviados</li>
+                        <li>method: Especifica o método HTTP a ser usado ao enviar o formulário (GET ou POST)</li>
+                        <li>autocomplete: Habilita ou desabilita o preenchimento automático em campos de entrada</li>
+                        <li>maxlength: Define o número máximo de caracteres permitidos em um campo de entrada</li>
+                        <li>minlength: Define o número mínimo de caracteres exigidos em um campo de entrada</li>
+                        <li>step: Define o incremento para campos de entrada numéricos</li>
+                        <li>pattern: Define uma expressão regular que o valor de um campo de entrada deve corresponder</li>
+                        <li>required: Torna um campo de entrada obrigatório</li>
+                        <li>lang: Especifica o idioma do conteúdo de um elemento</li>
+                        <li>charset: Especifica o conjunto de caracteres usado em um documento HTML</li>
+                        <li>http-equiv: Fornece informações equivalentes a um cabeçalho HTTP</li>
+                        <li>content: Usado com a tag &lt;meta&gt; para definir o valor do metadado</li>
+                        <li>defer: Indica que um script deve ser executado após o documento ter sido analisado</li>
+                        <li>async: Indica que um script deve ser executado de forma assíncrona</li>
+                        <li>crossorigin: Define como os recursos devem ser compartilhados entre origens</li>
+                        <li>integrity: Fornece uma verificação de integridade para recursos externos</li>
+                        <li>referrerpolicy: Define a política de referência para links e recursos</li>
+                        <li>sizes: Especifica os tamanhos de ícones para diferentes dispositivos</li>
+                        <li>media: Define o tipo de mídia para o qual um recurso é destinado</li>
+                        <li>hreflang: Especifica o idioma do recurso vinculado</li>
+                        <li>sandbox: Aplica restrições de segurança a um iframe</li>
+                        <li>allow: Define permissões para um iframe</li>
+                        <li>loading: Especifica o comportamento de carregamento de imagens e iframes</li>
+                        <li>novalidate: Desabilita a validação de formulários</li>
+                        <li>autofocus: Define que um elemento deve receber foco automaticamente ao carregar a página</li>
+                        <li>spellcheck: Habilita ou desabilita a verificação ortográfica em um elemento</li>
+                        <li>contenteditable: Torna o conteúdo de um elemento editável pelo usuário</li>
+                        <li>draggable: Define se um elemento pode ser arrastado</li>
+                        <li>hidden: Oculta um elemento da visualização</li>
+                        <li>tabindex: Define a ordem de tabulação para elementos interativos</li>
+                    </ul>
+                </article>
+            </div>
+        </main>
+        <script src="skecth.js">
+            ScrollReveal().reveal('#Textag', { delay: 200 });
+            ScrollReveal().reveal('#Midiatag', { delay: 400 });
+            ScrollReveal().reveal('#Linktag', { delay: 600 });
+            ScrollReveal().reveal('#Backtag', { delay: 800 });
+            ScrollReveal().reveal('#Listtag', { delay: 1000 });
+            ScrollReveal().reveal('#Tabletag', { delay: 1200 });
+            ScrollReveal().reveal('#Formtag', { delay: 1400 });
+            ScrollReveal().reveal('#atribute', { delay: 1600 });
+        </script>
+    </body>
+</html>
