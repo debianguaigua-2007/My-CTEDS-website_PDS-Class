@@ -3,29 +3,19 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <style>
-            .title{
-                font-family: Arial;
-            }
-            #painel-inclusão li{
-                display: inline;
-            }
-            .text{
-                font-family: "Monserrat";
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
     </head>
     <body>
         <header style="background: #d0d0d0">
             <h1 class="title">O Curso Tecnico em Desenvolvimento de Sistemas</h1>
-            <h5>Do Colégio Estadual Ambrósio Bini</h5>
+            <h5>Do Colégio Estadual Ambrósio Bini. <a href="https://debianguaigua-2007.github.io/My-CEAB-_site/">Saiba onde é o curso</a></h5>
             <p>Tem alguma deficiencia? Talvez isto possa ajudar:</p>
             <ul id="painel-inclusão">
-                <li><button>Aumentar fonte</button></li>
-                <li><button>Diminuir fonte</button></li>
-                <li><button>Reiniciar fonte</button></li>
-                <li><button>Alto contraste</button></li>
-                <li><button>Alternar fundo</button></li>
+                <li><button id="aumentar-fonte">Aumentar fonte</button></li>
+                <li><button id="diminuir-fonte">Diminuir fonte</button></li>
+                <li><button id="reinicia-fonte">Reiniciar fonte</button></li>
+                <li><button id="alterna-contraste">Alto contraste</button></li>
+                <p id="aviso-fonte"></p>
             </ul>
         </header>
         <main>
@@ -53,7 +43,68 @@
                         <li><p>Testes e Manutenção: Consertar e Melhorar programas.</p></li>
                     </ul>
                 </article>
+                <article>
+                    <h2 class="title">Plataformas para teste dos conhecimentos</h2>
+                    <p class="text">Ao longo do curso serão proporcionadas plataformas e websites para poder testar o que você aprendeu. São esses:</p>
+                    <ul class="plat">
+                        <p><em>Os títulos atuam também como atalhos, clique nos títulos para acceder às plataformas</em></p>
+                        <li><a href="https://github.com/"><strong>Github</strong></a>
+                            <p>É uma plataforma com a qual você pode criar diferentes projetos em diferentes linguagens de programação, muito útil para
+                                criar programas flexivéis com diversos códigos diferentes.</p>
+                        </li>
+                        <li><a href="https://scratch.mit.edu/"><strong>Scracht</strong></a>
+                            <p>É uma plataforma com a qual você pode criar historias, videos, jogos,
+                            e animações usando programação em bloco e desenho livre, serve para poder iniciar na programação desde o mais básico,
+                            se quiser saber mais sobre programação em bloco, <a>clique aqui</a>.</p>
+                        </li>
+                        <li><a href="https://colab.google/"><strong>Google Colab</strong></a>
+                            <p>Uma ferramenta do Google com o qual você pode criar projetos em Python e executá-los na hora, mas não somente com o Python,
+                            essa plataforma tem bibliotecas do Python já instaladas, como o Python Pandas, o Python Numpy, o Python Random, o Python Math,
+                            o Python Matplotlib, o Python Seaborn, entre outros.</p>
+                        </li>
+                        <li><a href="https://expo.dev/"><strong>Expo Snack</strong></a>
+                            <p>Uma plataforma com o qual você pode criar aplicativos mobiles usando a biblioteca React Native para o Javascript,
+                                mas também é possível colocar outras bibliotecas do React Native para poder customizar os seus aplicativos.</p>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <h2 class="title">Informações sobre algumas linguagens de programação:</h2>
+                    <p>À medida que vai avanzando no curso, serão esplicadados diferentes linguagens de programação. São esses:</p>
+                    <ul class="plat">
+                        <li><a><strong>HTML</strong></a>
+                            <p>HTML (HyperText Markup Language) é usado para estruturar o conteúdo de uma página na web. 
+                            Ele define os elementos básicos da página, como cabeçalhos, parágrafos, imagens e links.</p>
+                        </li>
+                        <li><a><strong>CSS</strong></a>
+                            <p>CSS (Cascading Style Sheets) é responsável pela aparência visual da página. 
+                            Ele permite estilizar o conteúdo HTML, controlando cores, fontes, espaçamentos, layouts e até animações.</p>
+                        </li>
+                        <li><a><strong>Javascript</strong></a>
+                            <p>JavaScript é a linguagem de programação que torna as páginas web interativas. 
+                                Ele permite criar funcionalidades dinâmicas, como validação de formulários, animações, 
+                                resposta a cliques e interações em tempo real com o servidor.</p>
+                        </li>
+                        <li><a><strong>Python</strong></a>
+                            <p>JavaScript é a linguagem de programação que torna as páginas web interativas. 
+                                Ele permite criar funcionalidades dinâmicas, como validação de formulários, animações, 
+                                resposta a cliques e interações em tempo real com o servidor.</p>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <h2 class="title">Habilidades desenvolvidas durante o curso</h2>
+                    <p class="text">A medida que você vai avanzando no curso, você vai desenvolvendo várias Habilidades:</p>
+                    <ul>
+                        <li>Raciocínio lógico: aprender a pensar passo a passo para resolver problemas.</li>
+                        <li>Criatividade: criar jogos, sites, apps e soluções novas.</li>
+                        <li>Trabalho em equipe: aprender a colaborar com colegas em projetos.</li>
+                        <li>Organização e planejamento: saber como organizar projetos grandes antes de programar.</li>
+                        <li>Comunicação: explicar suas ideias de forma clara, inclusive para pessoas que não entendem programação.</li>
+                    </ul>
+                </article>
             </div>
         </main>
+        <script src="skecth.js"></script>
     </body>
 </html>

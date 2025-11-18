@@ -1,0 +1,62 @@
+*{
+    padding: 2px auto;
+}
+.alto-contraste{
+    color: #fff;
+    background: #000;
+}
+.title{
+    font-family: Arial;
+}
+#painel-inclusão li{
+    display: inline;
+}
+#painel-inclusão button{
+    color: #fff;
+    background: #00a0ff;
+    border-color: #00a0ff;
+    border-radius: 10px;
+    padding: 5px; 
+}
+#painel-inclusão button:hover{
+    background: #00a0a0;
+    border-color: #00a0a0;
+}
+#painel-inclusão button:active{
+    background: #ffc0cb;
+    border-color: #ffc0cb;
+}
+.text{
+    font-family: "Monserrat";
+}
+.plat li{
+    display: inline-block;
+    text-align: center;
+    width: 20%;
+    vertical-align: top;
+    margin: 1px;
+    padding: 3px 3px;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+.plat li .alto-contraste{
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+ul a, header a{
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 0 0 3px;
+    padding: 10px;
+    background: gold;
+    border-radius: 10px;
+}
+ul a:hover, header a:hover{
+    background: #f0f8ff;
+}
+article{
+    align-items: center;
+    text-align: left;
+    padding: 10px;
+}
