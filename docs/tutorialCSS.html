@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tutorial CSS</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Tutorial de CSS</h1>
+            <a href="index.html">Voltar à página Principal</a>
+            <p>Tem alguma deficiencia? Talvez isto possa ajudar:</p>
+            <ul class="painel-inclusão">
+                <li><button id="aumentar-fonte">Aumentar fonte</button></li>
+                <li><button id="diminuir-fonte">Diminuir fonte</button></li>
+                <li><button id="reinicia-fonte">Reiniciar fonte</button></li>
+                <li><button id="alterna-contraste">Alto contraste</button></li>
+                <p id="aviso-fonte"></p>
+            </ul>
+        </header>
+        <main>
+            <section>
+                <h2>O que é CSS?</h2>
+                <p>CSS (Cascading Style Sheets) é uma linguagem de estilo usada para descrever a apresentação de um documento escrito em HTML ou XML.
+                Ele controla a aparência visual dos elementos na página, como cores, fontes, espaçamentos, layouts e até animações.</p>
+            </section>
+            <section>
+                <h2>Como usar CSS?</h2>
+                <p>Existem três maneiras principais de aplicar CSS a um documento HTML:</p>
+                <ul>
+                    <li><strong>CSS Inline:</strong> Estilos aplicados diretamente aos elementos HTML usando o atributo "style".</li>
+                    <li><strong>CSS Interno:</strong> Estilos definidos dentro de uma tag <code>&lt;style&gt;</code> no cabeçalho do documento HTML.</li>
+                    <li><strong>CSS Externo:</strong> Estilos armazenados em um arquivo separado com a extensão .css, que é vinculado ao documento HTML usando a tag <code>&lt;link&gt;</code>.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Exemplo de CSS Externo</h2>
+                <p>Veja um exemplo simples de como usar CSS externo:</p>
+                <pre><code>
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="pt-BR"&gt;
+                            &lt;head&gt;
+                                &lt;meta charset="UTF-8"&gt;
+                                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                                &lt;title&gt;Exemplo de CSS Externo&lt;/title&gt;
+                                &lt;link rel="stylesheet" type="text/css" href="styles.css"&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                                &lt;h1&gt;Olá, Mundo!&lt;/h1&gt;
+                                &lt;p&gt;Este é um exemplo de CSS externo.&lt;/p&gt;
+                            &lt;/body&gt;                           
+                        &lt;/html&gt;
+                </code></pre>
+                <h3>Conteúdo do arquivo styles.css</h3>
+                    <pre><code>
+                            body {
+                                background-color: #f0f0f0;
+                                font-family: Arial, sans-serif;
+                               }  
+                            h1 {
+                                color: #333333;
+                                text-align: center;
+                            }
+                            p {
+                                color: #666666;
+                                font-size: 16px;
+                            }
+                    </code></pre>
+                <article>
+                    <h2>Como usar os comandos CSS?</h2>
+                    <p>Os comandos CSS são usados para definir estilos para elementos HTML. Eles são compostos por seletores e declarações. 
+                    O seletor especifica o elemento HTML ao qual o estilo será aplicado, enquanto a declaração define as propriedades e valores do estilo.</p>
+                    <p>Num comando CSS, existem 4 (mas na maioria dos usos, 3) partes principais do comando: o elemento, a propiedade do estilo, o valor da propiedade, e o operador.</p>
+                </article>
+                <article>
+                    <h3>Elemento</h3>
+                    <p>O elemento é o componente HTML ao qual o estilo será aplicado. Pode ser uma tag HTML, uma classe, um ID, ou todo o site no geral,
+                    é o primeiro componente do comando CSS:</p>
+                    <ul class="plat">
+                        <li><p>Para colocar um estilo para um tipo de elemento html, o elemento deve ser declarado assim:</p>
+                        <pre><code>
+                        p :A {
+                            Y: Z;
+                        }
+                        </code></pre></li>
+                        <li><p>Para colocar um estilo para uma classe, o elemento deve ser declarado assim:</p>
+                        <pre><code>
+                        .nome-da-classe {
+                            Y: Z;
+                        }
+                        </code></pre></li>
+                        <li><p>Para colocar um estilo para um ID, o elemento deve ser declarado assim:</p>
+                        <pre><code>
+                        #nome-do-id {
+                            Y: Z;
+                        }
+                        </code></pre></li>
+                        <li><p>Se o estilo é para todo o site, o elemento deve ser declarado assim:</p>
+                        <pre><code>
+                        * {
+                            Y: Z;
+                        }
+                        </code></pre></li>
+                    </ul>
+                    <p>Às vezes o elemento para o estilo está dentro de outras tags e não é diretamente acessível, ou somente é necessário usar um fragmento dessa classe,
+                    então é necessário usar seletores mais específicos para aplicar o estilo corretamente, isso pode ser feito combinando seletores ou usando pseudo-classes:</p>
+                    <pre><code>
+                    div p {
+                        Y: Z;
+                    }
+                    .caixa li{
+                        Y: Z;
+                    }
+                    </code></pre>
+                    <p>Às vezes o estilo precisa ser aplicado a mais de um tipo de elemento, porém, diante desse caso, em vez de criar dois comandos separados,
+                    é possível usar vírgulas para separar os seletores e assim ahorrar espaço na área de comandos:</p>
+                    <pre><code>
+                    h1, h2, h3 {
+                        Y: Z;
+                    }
+                    </code></pre>
+                </article>
+                <article>
+                    <h3>Propriedade do estilo</h3>
+                    <p>A propriedade do estilo é a característica visual que você deseja modificar no elemento selecionado. Pode ser a cor do texto, o tamanho da fonte,
+                    o espaçamento entre linhas, a margem, o preenchimento, entre outros. A propriedade do estilo é especificada após o seletor e seguida por dois pontos (:).</p>
+                </article>
+                <article>
+                    <h3>Valor da propriedade</h3>
+                    <p>O valor da propriedade é o valor específico que você atribui à propriedade do estilo. Pode ser um valor numérico, um valor em pixels ou rems,
+                        um grupo de numeros, uma cor (em nome, hexadecimal, rgb, etc), uma URL, palavras-chave, etc. O valor da propriedade é especificado após os dois pontos (:) e seguido por um ponto e vírgula (;)
+                        As vezes, um elemento pode ter mais de uma propriedade de estilo, nesse caso, estes só precisam de um comando CSS, cada propriedade e valor devem ser separados por ponto e vírgula (;).</p>
+                </article>
+                <article>
+                    <h3>Operador</h3>
+                    <p>O operador é usado para poder aplicar o estilo ante uma interação com o usuario, seja um clique, seja que este tocando o cursor sobre o elemento, ou que o elemento esteja ativo, etc.
+                    O operador é colocado depois do elemento, antes da abertura das chaves ({), e é precedido por dois pontos (:).</p>
+                    <pre><code>
+                    a:hover {
+                        color: blue;
+                    }
+                    </code></pre>
+                    <p>Também é possível usar comentários (frases que aparecem apenas no código e não são exibidas no site) para documentar o código CSS e facilitar a compreensão:</p>
+                    <pre><code>
+                    /* Este é um comentário em CSS */
+                    p {
+                        color: red; /* Define a cor do texto como vermelho */
+                    }
+                    </code></pre>
+                </article>
+            </section>
+        </main>
+        <footer>
+        </footer>
+        <script src="skecth.js"></script>
+    </body>
+</html>
